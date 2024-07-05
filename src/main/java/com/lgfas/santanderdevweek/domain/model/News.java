@@ -1,4 +1,4 @@
-package com.lgfas.santanderdevweek.model;
+package com.lgfas.santanderdevweek.domain.model;
 
 import jakarta.persistence.Entity;
 
