@@ -1,13 +1,24 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${PGURL}
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
 
   jpa:
-    open-in-view: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
+#logging:
+#  level:
+#    org.springframework: DEBUG
+#    org.hibernate: DEBUG
+
+
+
+#jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
